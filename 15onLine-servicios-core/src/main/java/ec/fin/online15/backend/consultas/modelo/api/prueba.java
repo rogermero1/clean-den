@@ -33,7 +33,8 @@ public class prueba {
                  System.out.println("ID Cliente: " + datosCliente.getIdCliente());
                  System.out.println("Nombre: " + datosCliente.getNombres() + " " + datosCliente.getApellidos());
                  System.out.println("Residencia Fiscal: " + datosCliente.getResidenciaFiscal());
-                 
+                 System.out.println("Fecha de Nacimiento: "+datosCliente.getFechaNacimiento());
+                 System.out.println("Celular: "+datosCliente.getCelular());                 
              }
                          
              List<CuentaAhorro> cuentas = datosCliente.getCuentasAhorro();
@@ -42,6 +43,7 @@ public class prueba {
                      System.out.println("Número de Cuenta: " + cuenta.getNumeroCuenta());
                      System.out.println("Saldo: " + cuenta.getSaldoDisponible());
                      System.out.println("Maneja Libreta:"+cuenta.getManejaLibreta());
+                     System.out.println("Fecha de apertura:"+cuenta.getFechaApertura());
                  }
              }
              
@@ -50,8 +52,7 @@ public class prueba {
                  for (Credito credito : listaCreditos) {
                      System.out.println("Número de Crédito: " + credito.getIdOperacion());
                      System.out.println("Monto: " + credito.getMontoAprobado());                     
-                     System.out.println("Interés: " + credito.getCodigoProducto());
-                    
+                     System.out.println("Interés: " + credito.getCodigoProducto());                    
                  }
              }
              
