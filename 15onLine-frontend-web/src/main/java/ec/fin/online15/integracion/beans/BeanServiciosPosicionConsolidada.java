@@ -14,4 +14,5 @@ public class BeanServiciosPosicionConsolidada {
 		ClienteServicioPosicionConsolidadaWs servicioPosicionConsolidada = new ClienteServicioPosicionConsolidadaWs();
 		return servicioPosicionConsolidada.getInterfaz();
 	}
+	
 }

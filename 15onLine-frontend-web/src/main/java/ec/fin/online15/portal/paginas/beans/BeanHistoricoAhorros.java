@@ -70,19 +70,5 @@ public class BeanHistoricoAhorros extends BaseManagedBean {
 		this.movimientos = movimientos;
 	}
 
-	public void consultar(ActionEvent evento) {
-		if (this.fechaDesde == null || this.fechaHasta == null) {
-			this.aniadirMensajeError(
-					this.configuracionesGenerales.getTituloAplicacion(),
-					"Seleccione las fechas");
-		} else {
-			this.movimientos = this.servicioPosicionConsolidada
-					.getIServicioPosicionConsolidadaWs()
-					.consultaHistoricoAhorro(
-							this.getHttpSession().getId(),
-							this.posicionConsolidada.getCuentaSeleccionada()
-									.getNumeroCuenta(), this.fechaDesde,
-							this.fechaHasta);
-		}
-	}
+	
 }

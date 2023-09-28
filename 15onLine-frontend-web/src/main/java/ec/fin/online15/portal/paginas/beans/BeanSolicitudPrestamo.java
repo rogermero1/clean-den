@@ -61,9 +61,7 @@ public class BeanSolicitudPrestamo extends BaseManagedBean {
 		this.solicitud.setCuota(0D);
 		// 3-alemana(variable)4-frances (fija)
 		this.solicitud.setTipoAmortizacion(4);
-		this.solicitud
-				.setPreAprobado(posicionConsolidada.isPreaprobado() == true ? "S"
-						: "N");
+		//this.solicitud.setPreAprobado(posicionConsolidada.isPreaprobado() == true ? "S": "N");
 
 		this.aceptaAutorizacion = false;
 

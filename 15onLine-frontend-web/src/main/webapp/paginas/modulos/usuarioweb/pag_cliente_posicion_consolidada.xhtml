@@ -17,7 +17,7 @@
 	<ui:define name="content">
 		<p:growl id="msjGeneral" showDetail="true" showSummary="true"
 			sticky="true" life="5000"
-			rendered="#{posicionConsolidadaMB.preaprobado}" />
+			rendered="" />
 		<center>
 			<h:form id="frmPosicionConsolidada" style="width:100%;">
 				<h:panelGrid columns="1">
@@ -27,12 +27,12 @@
 				</h:panelGrid>
 				<!-- 				<p:spacer height="10" /> -->
 				<h:panelGrid columns="2">
-					<p:outputLabel rendered="#{posicionConsolidadaMB.preaprobado}"
+					<p:outputLabel rendered=""
 						style="font-weight:bold; font-size:15px;"
 						value="Usted tiene un crédito preaprobado, si desea aplicar de click en " />
 					<p:commandLink style="font-weight:bold; font-size:15px;"
-						rendered="#{posicionConsolidadaMB.preaprobado}" value="continuar"
-						action="#{posicionConsolidadaMB.solicitudPrestamo}"
+						rendered="" value="continuar"
+						action="#"
 						onstart="PF('dlgCargando').show()"
 						onsuccess="PF('dlgCargando').hide()">
 					</p:commandLink>
@@ -51,20 +51,9 @@
 					<h:outputText
 						value="Por cualquier duda comunícate a nuestro Call Center 052590040" />
 				</p:dialog>
+				<h:outputText value="#{posicionConsolidadaMB.get}" />
 			</h:form>
-			<!-- 			<h:form> -->
-			<!-- 				<p:menu> -->
-			<!-- 					<f:ajax render=":content"> -->
-			<!-- 						<p:menuitem value="prueba" -->
-			<!-- 							action="#{controlPagina.asignarPagina('/testReporte.xhtml')}" -->
-			<!-- 							update=":content" /> -->
-			<!-- 					</f:ajax> -->
-			<!-- 				</p:menu> -->
-			<!-- 			</h:form> -->
-			<!-- 			<p:panel id="content"> -->
-			<!-- 				<p:outputLabel value="#{controlPagina.pagina}" /> -->
-			<!-- 				<ui:include src="#{controlPagina.pagina}" /> -->
-			<!-- 			</p:panel> -->
+			
 		</center>
 	</ui:define>
 

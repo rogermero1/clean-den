@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
+
+
 import ec.fin.online15.aplicacion.generales.NombresConstantesMemoria;
 import ec.fin.online15.aplicacion.paginas.BeanConfiguracionesGenerales;
 import ec.fin.online15.aplicacion.paginas.BeanServicioUsuario;
@@ -41,6 +44,8 @@ public class FiltroJASS implements Filter {
 	@Default
 	private BeanServicioUsuario beanServicioUsuario;
 
+	
+
 	public FiltroJASS() {
 	}
 
@@ -59,7 +64,8 @@ public class FiltroJASS implements Filter {
 		HttpServletResponse lresponse = (HttpServletResponse) response;
 		HttpSession lsession = lrequest.getSession(false);
 		// Autenticacion
-		System.out.println("FILTRO DE VERIFICACION JASS");
+		
+		//System.out.println("FILTRO DE VERIFICACION JASS");
 		if (lrequest.getUserPrincipal() == null
 				|| !beanServicioUsuario.getAutenticacionCompleta()) {
 			System.out
